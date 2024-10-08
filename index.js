@@ -5,11 +5,11 @@ const students = [
   { name: "Diana", age: 23, grade: 95 },
 ];
 
-students
+const topstudents = students
   .filter((student) => student.grade > 80)
   .forEach((student) => console.log("Top student", student.name));
 
-students
+const youngstudents = students
   .filter((student) => student.age <= 21)
   .forEach((student) => console.log("Young student", student.name));
 
@@ -32,3 +32,32 @@ products.forEach((product) =>
     product.rating
   )
 );
+
+Math.round;
+products.forEach((product) =>
+  console.log(product.name, ":Product Price:", product.price * 1.1)
+);
+
+const categories = [];
+products.forEach((product) => {
+  if (!categories.includes(product.category)) {
+    categories.push(product.category);
+  }
+});
+
+console.log("Unique Categories:", categories);
+
+const electronics = products.filter(
+  (product) => product.category === "Electronics"
+);
+console.log("Electronics:", electronics);
+
+const expensiveProducts = products.filter((product) => product.price > 300);
+console.log("Expensive Products:", expensiveProducts);
+
+const highlyrated = products.filter((product) => product.rating >= 4.5);
+console.log("Highly Rated Products:", highlyrated);
+
+const Highly = products
+  .filter((product) => product.rating <= 21)
+  .forEach((product) => console.log(product.name));
